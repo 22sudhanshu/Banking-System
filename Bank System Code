@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class Bank_Management_System {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("**  Welcome To Bank Of India  **");
+        System.out.println("Hello sir/madam which type of help you want from bank please select the option from given below --");
+        System.out.println("1.Create Account \n2.Cash Withdraw \n3.Cash Deposite \n4.Check Bank Balance \n5.Bank Loan Inquarry");
+        int Bank= sc.nextInt();
+
+        switch(Bank){
+            case 1:
+                System.out.println("Hello sir create your Account");
+                System.out.println("Enter Your Name That Name In Adhar Card ");
+                String name = sc.next();
+                System.out.println("Enter Your Adhar Number ");
+                long Adhar=sc.nextInt();
+                System.out.println("Digital Signatur");
+                String Digital=sc.next();
+                System.out.println("You Bank Account Was Created Successfully");
+                break;
+            case 2:
+                int Cash=10000;
+                System.out.println("You have Bank Balance is 10000 ");
+                System.out.println("Enter a passbook number --");
+                long passbook=sc.nextInt();
+                System.out.println("Enter a Rupees how many withdraw you want -- ");
+                int Money=sc.nextInt();
+                System.out.println("Enter singnature -- ");
+                String string=sc.next();
+                System.out.println("Done your cash was withdarw successfull");
+                int sub=Cash-Money;
+                System.out.println("Your Balance is == "+sub);
+
+            break;
+            case 3:
+                System.out.println("Enter a passbook number --");
+                long passbook_no=sc.nextInt();
+                System.out.println("Enter a Rupees how many Deposite you want -- ");
+                int Money_depo=sc.nextInt();
+                System.out.println("Enter singnature -- ");
+                String string_s=sc.next();
+                System.out.println("Done your cash was Deposite successfull");
+                break;
+            case 4:
+                System.out.println("Enter a passbook number --");
+                long passbook_ch=sc.nextInt();
+                System.out.println("your bank balnce is 1000000");
+                break;
+            case 5:
+                System.out.println("Wellcome sir/madam for bank loan inqurry we are providing details ");
+                System.out.println("Visit the credit bureau's website.\n" +
+                        "Log in with your PAN card and other details.\n" +
+                        "Enter OTP to confirm your registered mobile number.\n" +
+                        "Download your credit report and check your active loans.");
+                break;
+            default:
+                System.out.println("Invaild you are choose details");
+
+
+
+        }
+
+    }
+}
